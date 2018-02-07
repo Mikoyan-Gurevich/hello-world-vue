@@ -4,7 +4,9 @@ new Vue({
         firstName: 'Gaurav',
         lastName: 'Sharma',
         brotherFirstName: 'Saurabh',
-        googleSearchURL: 'www.google.com'
+        googleSearchURL: 'www.google.com',
+        value1: '',
+        value2: ''
     },
     methods: {
         getFullName: function () {
@@ -19,6 +21,19 @@ new Vue({
         buttonClicked2: function (message, event) {
             console.log(event);
             alert(message);
+        },
+        myListener: function () {
+            alert('Congratulations!!');
+        },
+        handlerx: function () {
+            alert('Nicel Click');
+        },
+        handlerxx: function () {
+            alert('Nicel Click again');
+        },
+        inputHandler: function (event) {
+            this.value2 = event.target.value;
+            //alert(event.target.value);
         }
     }
 });

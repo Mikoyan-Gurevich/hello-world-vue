@@ -9,7 +9,13 @@
             <!-- <directive name>:<argument to the directive>='<expression>' -->
             <button v-on:click='buttonClicked'> Click Me.</button>
             <button v-on:click="buttonClicked2('Hello World', $event)"> Click Me 2.</button>
-            <button v-onLclick.prevent> CLick sample</button>
+            <button v-on:click.prevent> CLick sample</button>
+            <input v-on:keyup.shift.enter="myListener" placeholder="press shift + enter simultaneously"/>
+            <!-- shift is a 'modifier key' and enter is a 'key modifier' -->
+            <button v-on:click.shift="handlerx">Press shift and then try clicking this button</button>
+            <button v-on:click.meta="handlerxx">Press meta key (cmd or windows) and then try clicking this button</button>
+            <input v-on:keyup.enter.ctrl="inputHandler($event)"/>
+            <input v-bind:value='value2' />
                 <div>
                     <label>Enter Movie Name:</label>
                     <input type='text' />

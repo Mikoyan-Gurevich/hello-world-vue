@@ -1,0 +1,26 @@
+<html>
+    <head></head>
+    <body>
+        <div id='app'> 
+            <h1>{{ getFullName() }}</h1>
+            <h1>{{ getBrotherFullName(brotherFirstName, lastName) }}</h1>
+            <a v-bind:href='googleSearchURL'>Search Google</a>
+            <div v-bind:title='getFullName()'>Hover to see ny full name</div>
+            <!-- <directive name>:<argument to the directive>='<expression>' -->
+            <button v-on:click='buttonClicked'> Click Me.</button>
+            <button v-on:click="buttonClicked2('Hello World', $event)"> Click Me 2.</button>
+            <button v-onLclick.prevent> CLick sample</button>
+                <div>
+                    <label>Enter Movie Name:</label>
+                    <input type='text' />
+                </div>
+                <div>
+                    <label>Enter Release Date:</label>
+                    <input type='text' />
+                </div>
+        </div>
+
+        <script src='./vue.js'></script>
+        <script type='text/javascript' src='./index.js'></script>
+    </body>
+</html>
